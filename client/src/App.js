@@ -11,7 +11,12 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path="/" component={Login} />
-        <PrivateRoute path="/protected" component={BubblePage} />
+        <Route
+          path = "protected/colors/:id"
+          render = {props =>{
+           return <PrivateRoute {...props} component={BubblePage} />
+          }}
+          />   
       </div>
     </Router>
   );

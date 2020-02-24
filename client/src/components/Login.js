@@ -38,7 +38,7 @@ class Login extends React.Component {
         localStorage.setItem('token', res.data.payload);
 
         //the user is then sent to the /protected page.
-        this.props.history.push('/protected');
+        this.props.history.push('/protected/colors/:id');
       })
       .catch(err => console.log(err));
   };

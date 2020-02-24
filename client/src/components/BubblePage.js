@@ -8,7 +8,8 @@ export default class BubblePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      colorList: []
+      colorList: [],
+      id: props.match.params
     };
   }
 
@@ -22,7 +23,7 @@ export default class BubblePage extends Component {
   render() {
     return (
       <>
-      <ColorList colors={this.state.colorList} updateColors={this.setState.colorList} />
+      <ColorList id= {this.state.id} colors={this.state.colorList} updateColors={this.setState.colorList} />
       <Bubbles colors={this.state.colorList} />
     </>
     );
