@@ -12,7 +12,7 @@ function App() {
       <div className="App">
         <Route exact path="/" component={Login} />
         <Route
-          path = "protected/colors/:id"
+          path = "/protected/colors/:id"
           render = {props =>{
            return <PrivateRoute {...props} component={BubblePage} />
           }}
