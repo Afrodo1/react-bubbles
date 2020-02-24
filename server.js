@@ -1,3 +1,4 @@
+import {port} from './client/src/App';
 const express = require("express");
 const bodyParser = require("body-parser");
 const CORS = require("cors");
@@ -158,6 +159,6 @@ app.get("/", function(req, res) {
   res.send("App is working 👍");
 });
 
-app.listen(5000, () => {
-  console.log("Server listening on port 5000");
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
 });
